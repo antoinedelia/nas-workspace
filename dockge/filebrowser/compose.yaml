@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  filebrowser:
+    container_name: filebrowser
+    ports:
+      - 8147:80
+    environment:
+      - PUID=1026
+      - PGID=100
+      - TZ=Europe/Paris
+    volumes:
+      - /volume1:/srv
+      - /volume2/dockerssd/filebrowser/config/database.db:/database.db
+    restart: always
+    image: filebrowser/filebrowser:latest
+networks: {}

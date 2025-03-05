@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  lidarr:
+    container_name: lidarr
+    ports:
+      - 8686:8686
+    environment:
+      - PUID=1026
+      - PGID=100
+      - TZ=Europe/Paris
+    volumes:
+      - /volume1/Downloads:/downloads
+      - /volume2/dockerssd/lidarr:/config
+      - /volume1/media/Music:/music
+    restart: unless-stopped
+    image: ghcr.io/linuxserver/lidarr:latest
+networks: {}

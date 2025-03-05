@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  stirling-pdf:
+    image: frooodle/s-pdf:latest
+    ports:
+      - 1646:8080 # pdf to numeric = 16;4;6, hence why 1646 as port number
+    volumes:
+      - /volume2/dockerssd/stirling-pdf/trainingData:/usr/share/tessdata # Required for extra OCR languages
+      - /volume2/dockerssd/stirling-pdf/extraConfigs:/configs
+      - /volume2/dockerssd/stirling-pdf/customFiles:/customFiles/
+      - /volume2/dockerssd/stirling-pdf/logs:/logs/
+      - /volume2/dockerssd/stirling-pdf/pipeline:/pipeline/
+    environment:
+      - DOCKER_ENABLE_SECURITY=true
+      - INSTALL_BOOK_AND_ADVANCED_HTML_OPS=false
+      - LANGS=fr_FR
+networks: {}

@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  prowlarr:
+    container_name: prowlarr
+    ports:
+      - 9797:9797
+    environment:
+      - PUID=1026
+      - PGID=100
+      - TZ=Europe/Paris
+    volumes:
+      - /volume2/dockerssd/prowlarr:/config
+    restart: unless-stopped
+    image: lscr.io/linuxserver/prowlarr:latest
+networks: {}

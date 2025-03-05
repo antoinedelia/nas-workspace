@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  flaresolverr:
+    container_name: flaresolverr
+    ports:
+      - 8191:8191
+    environment:
+      - PUID=1026
+      - PGID=100
+      - TZ=Europe/Paris
+    restart: always
+    image: ghcr.io/flaresolverr/flaresolverr:latest
+networks: {}

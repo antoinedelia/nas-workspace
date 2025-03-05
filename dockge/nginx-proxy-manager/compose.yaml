@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  nginx-proxy-manager:
+    container_name: nginx_proxy_manager
+    ports:
+      - 8341:80
+      - 81:81
+      - 8766:443
+    environment:
+      - TZ=Europe/Paris
+    volumes:
+      - /volume2/dockerssd/npm/config.json:/app/config/production.json
+      - /volume2/dockerssd/npm/data:/data
+      - /volume2/dockerssd/npm/letsencrypt:/etc/letsencrypt
+    restart: always
+    image: jc21/nginx-proxy-manager:2.11.0
+networks: {}

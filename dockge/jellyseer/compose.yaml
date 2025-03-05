@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  jellyseerr:
+    container_name: jellyseerr
+    ports:
+      - 5055:5055
+    environment:
+      - PUID=1026
+      - PGID=100
+      - TZ=Europe/Paris
+    volumes:
+      - /volume2/dockerssd/jellyseer:/app/config
+    restart: unless-stopped
+    image: fallenbagel/jellyseerr:latest
+networks: {}

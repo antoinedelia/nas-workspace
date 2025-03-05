@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  gluetun:
+    image: qmcgaw/gluetun
+    # See https://github.com/qdm12/gluetun-wiki/blob/main/setup/connect-a-container-to-gluetun.md#external-container-to-gluetun
+    container_name: gluetun
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - 8888:8888/tcp # HTTP proxy
+      - 8388:8388/tcp # Shadowsocks
+      - 8388:8388/udp # Shadowsocks
+      - 8080:8080 # qbittorrent
+      - 6881:6881 # qbittorrent
+      - 6881:6881/udp # qbittorrent
+      - 5030:5030 # soulseek
+      - 5031:5031 # soulseek
+      - 50300:50300 # soulseek
+    volumes:
+      - /volume2/dockerssd/gluetun:/gluetun
+    environment:
+      # See https://github.com/qdm12/gluetun-wiki/tree/main/setup#setup
+      - VPN_SERVICE_PROVIDER=private internet access
+      - OPENVPN_USER=${OPENVPN_USER}
+      - OPENVPN_PASSWORD=${OPENVPN_PASSWORD}
+      - SERVER_REGIONS=France,Belgium
+networks: {}

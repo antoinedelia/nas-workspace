@@ -1,0 +1,25 @@
+version: "3.8"
+services:
+  lubelog:
+    image: ghcr.io/hargata/lubelogger:latest
+    build: .
+    restart: unless-stopped
+    # volumes used to keep data persistent
+    volumes:
+      - /volume2/dockerssd/lubelog/config:/App/config
+      - /volume2/dockerssd/lubelog/data:/App/data
+      - /volume2/dockerssd/lubelog/translations:/App/wwwroot/translations
+      - /volume2/dockerssd/lubelog/documents:/App/wwwroot/documents
+      - /volume2/dockerssd/lubelog/images:/App/wwwroot/images
+      - /volume2/dockerssd/lubelog/temp:/App/wwwroot/temp
+      - /volume2/dockerssd/lubelog/log:/App/log
+      - /volume2/dockerssd/lubelog/keys:/root/.aspnet/DataProtection-Keys
+    # expose port and/or use serving via traefik
+    ports:
+      - 1996:8080
+    environment:
+      - PUID=1026
+      - PGID=100
+      - TZ=Europe/Paris
+      - LC_ALL=fr_FR.UTF-8
+networks: {}

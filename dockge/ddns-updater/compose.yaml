@@ -1,0 +1,29 @@
+version: "3.7"
+services:
+  ddns-updater:
+    image: qmcgaw/ddns-updater
+    network_mode: bridge
+    ports:
+      - 8008:8000/tcp
+    volumes:
+      - /volume2/dockerssd/updater/data:/updater/data
+    environment:
+      - PERIOD=5m
+      - UPDATE_COOLDOWN_PERIOD=5m
+      - PUBLICIP_FETCHERS=all
+      - PUBLICIP_HTTP_PROVIDERS=all
+      - PUBLICIPV4_HTTP_PROVIDERS=all
+      - PUBLICIPV6_HTTP_PROVIDERS=all
+      - PUBLICIP_DNS_PROVIDERS=all
+      - PUBLICIP_DNS_TIMEOUT=3s
+      - HTTP_TIMEOUT=10s
+      - LISTENING_ADDRESS=:8000
+      - ROOT_URL=/
+      - LOG_LEVEL=info
+      - LOG_CALLER=hidden
+      - SHOUTRRR_ADDRESSES=${SHOUTRRR_ADDRESSES}
+      - PUID=1026
+      - PGID=100
+      - TZ=Europe/Paris
+    restart: unless-stopped
+networks: {}

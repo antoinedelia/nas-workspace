@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  bazarr:
+    container_name: bazarr
+    ports:
+      - 6767:6767
+    environment:
+      - PUID=1026
+      - PGID=100
+      - TZ=Europe/Paris
+    volumes:
+      - /volume2/dockerssd/bazarr:/config
+      - /volume1/media:/media
+    restart: always
+    image: ghcr.io/linuxserver/bazarr:latest
+networks: {}
