@@ -1,6 +1,7 @@
 version: "3.7"
 services:
   ddns-updater:
+    container_name: ddns-updater
     image: qmcgaw/ddns-updater
     network_mode: bridge
     ports:
