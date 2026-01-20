@@ -1,12 +1,12 @@
 version: "3.8"
 services:
   slskd:
-    image: slskd/slskd:latest
+    image: slskd/slskd:0.24.3
     container_name: slskd
     environment:
       - SLSKD_REMOTE_CONFIGURATION=true
     volumes:
       - /volume2/dockerssd/soulseek:/app
-    restart: unless-stopped
+    restart: always
     network_mode: container:gluetun
 networks: {}
