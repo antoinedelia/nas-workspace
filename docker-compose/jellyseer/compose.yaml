@@ -10,6 +10,6 @@ services:
       - TZ=Europe/Paris
     volumes:
       - /volume2/dockerssd/jellyseer:/app/config
-    restart: unless-stopped
-    image: fallenbagel/jellyseerr:latest
+    restart: always
+    image: fallenbagel/jellyseerr:2.7.3
 networks: {}
