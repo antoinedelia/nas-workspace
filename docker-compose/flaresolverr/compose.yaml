@@ -9,5 +9,5 @@ services:
       - PGID=100
       - TZ=Europe/Paris
     restart: always
-    image: ghcr.io/flaresolverr/flaresolverr:latest
+    image: ghcr.io/flaresolverr/flaresolverr:v3.4.6
 networks: {}

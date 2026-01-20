@@ -1,9 +1,10 @@
 version: "3.8"
 services:
   gluetun:
-    image: qmcgaw/gluetun
+    image: qmcgaw/gluetun:v3.40.3
     # See https://github.com/qdm12/gluetun-wiki/blob/main/setup/connect-a-container-to-gluetun.md#external-container-to-gluetun
     container_name: gluetun
+    restart: always
     cap_add:
       - NET_ADMIN
     ports:
@@ -16,6 +17,8 @@ services:
       - 5030:5030 # soulseek
       - 5031:5031 # soulseek
       - 50300:50300 # soulseek
+      - 1613:1613 # joal
+      - 1613:1613/udp # joal
     volumes:
       - /volume2/dockerssd/gluetun:/gluetun
     environment:

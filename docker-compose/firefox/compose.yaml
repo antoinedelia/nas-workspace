@@ -8,12 +8,11 @@ services:
       - PUID=1026
       - PGID=100
       - TZ=Europe/Paris
-      - TITLE=Firefox
       - LSIO_FIRST_PARTY=true
       - NVIDIA_DRIVER_CAPABILITIES=graphics,compat32,utility
       - PULSE_RUNTIME_PATH=/defaults
     volumes:
       - /volume2/dockerssd/firefox:/config
     restart: always
-    image: ghcr.io/linuxserver/firefox:latest
+    image: lscr.io/linuxserver/firefox:latest
 networks: {}

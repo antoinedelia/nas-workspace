@@ -3,14 +3,13 @@ services:
   filebrowser:
     container_name: filebrowser
     ports:
-      - 8147:80
+      - 8147:8080
     environment:
-      - PUID=1026
-      - PGID=100
       - TZ=Europe/Paris
     volumes:
       - /volume1:/srv
-      - /volume2/dockerssd/filebrowser/config/database.db:/database.db
+      - /volume2/dockerssd/filebrowser/config:/database
+      - /volume2/dockerssd/filebrowser/config:/config
     restart: always
     image: filebrowser/filebrowser:latest
 networks: {}

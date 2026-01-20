@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   qbittorrent:
-    image: lscr.io/linuxserver/qbittorrent:latest
+    image: lscr.io/linuxserver/qbittorrent:5.1.4
     container_name: qbittorrent
     environment:
       - PUID=1026
@@ -13,6 +13,10 @@ services:
       - /volume2/dockerssd/qbittorrentvpn:/config
       - /volume1/Downloads:/downloads
       - /volume1/media:/mymedia
-    restart: unless-stopped
+    restart: always
+    deploy:
+      resources:
+        limits:
+          memory: 4000M # limit runaway RAM usage
     network_mode: container:gluetun
 networks: {}

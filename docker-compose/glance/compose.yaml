@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  glance:
+    container_name: glance
+    image: glanceapp/glance:0.8.4
+    volumes:
+      - /volume2/dockerssd/glance/config:/app/config
+    ports:
+      - 6699:8080
+    restart: unless-stopped
+networks: {}
