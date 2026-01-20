@@ -12,6 +12,6 @@ services:
       - /volume2/dockerssd/radarr:/config
       - /volume1/media:/movies
       - /volume1/Downloads:/downloads
-    restart: unless-stopped
-    image: ghcr.io/linuxserver/radarr
+    restart: always
+    image: ghcr.io/linuxserver/radarr:6.0.4
 networks: {}
