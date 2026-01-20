@@ -2,7 +2,7 @@ version: "3.7"
 services:
   ddns-updater:
     container_name: ddns-updater
-    image: qmcgaw/ddns-updater
+    image: qmcgaw/ddns-updater:2.9.0
     network_mode: bridge
     ports:
       - 8008:8000/tcp
@@ -26,5 +26,5 @@ services:
       - PUID=1026
       - PGID=100
       - TZ=Europe/Paris
-    restart: unless-stopped
+    restart: always
 networks: {}
