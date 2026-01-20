@@ -12,6 +12,6 @@ services:
       - /volume1/Downloads:/downloads
       - /volume2/dockerssd/lidarr:/config
       - /volume1/media/Music:/music
-    restart: unless-stopped
-    image: ghcr.io/linuxserver/lidarr:latest
+    restart: always
+    image: ghcr.io/linuxserver/lidarr:3.1.0
 networks: {}
