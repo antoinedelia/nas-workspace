@@ -10,7 +10,8 @@ services:
       - TZ=Europe/Paris
     volumes:
       - /volume2/dockerssd/bazarr:/config
-      - /volume1/media:/media
+      - /volume1/data:/data
     restart: always
     image: ghcr.io/linuxserver/bazarr:latest
 networks: {}
+
