@@ -10,8 +10,10 @@ services:
       - TZ=Europe/Paris
     volumes:
       - /volume2/dockerssd/sonarr:/config
+      - /volume1/data:/data
       - /volume1/media:/my-media
       - /volume1/Downloads:/downloads
     restart: always
     image: ghcr.io/linuxserver/sonarr:4.0.16
 networks: {}
+
