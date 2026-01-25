@@ -9,7 +9,7 @@ services:
     volumes:
       - /volume2/dockerssd/beszel:/beszel_data
   beszel-agent:
-    image: henrygd/beszel-agent:latest
+    image: henrygd/beszel-agent:0.17.0
     container_name: beszel-agent
     restart: unless-stopped
     network_mode: host
@@ -19,3 +19,4 @@ services:
       PORT: 45876
       # Do not remove quotes around the key
       KEY: ${KEY}
+
