@@ -9,7 +9,7 @@ services:
     volumes:
       - /volume2/dockerssd/beszel:/beszel_data
   beszel-agent:
-    image: henrygd/beszel-agent:0.17.0
+    image: henrygd/beszel-agent:0.18.2
     container_name: beszel-agent
     restart: unless-stopped
     network_mode: host
