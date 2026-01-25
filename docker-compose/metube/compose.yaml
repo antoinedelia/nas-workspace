@@ -8,3 +8,4 @@ services:
       - 8081:8081
     volumes:
       - /volume1/media/Youtube:/downloads
+      - /volume1/data/media/youtube:/downloads
