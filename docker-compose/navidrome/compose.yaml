@@ -11,6 +11,8 @@ services:
     volumes:
       - /volume2/dockerssd/navidrome:/data
       - /volume1/media/Music:/music
+      - /volume1/data/media/music:/media
     restart: always
     image: deluan/navidrome:0.59.0
 networks: {}
+
