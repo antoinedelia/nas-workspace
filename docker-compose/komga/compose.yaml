@@ -6,7 +6,7 @@ services:
     volumes:
       - /volume2/dockerssd/komga/data:/data
       - /volume2/dockerssd/komga/config:/config
-      - /volume1/media/Books:/media
+      - /volume1/data/media:/media
     ports:
       - 25600:25600
     environment:
