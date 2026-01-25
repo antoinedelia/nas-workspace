@@ -12,6 +12,9 @@ services:
       - NET_RAW
       - NET_ADMIN
       - NET_BIND_SERVICE
+      - CHOWN
+      - SETUID
+      - SETGID
     restart: unless-stopped
     volumes:
       - /etc/localtime:/etc/localtime:ro
