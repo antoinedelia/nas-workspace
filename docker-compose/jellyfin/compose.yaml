@@ -11,7 +11,9 @@ services:
       - JELLYFIN_PublishedServerUrl=https://media.antoinedelia.fr
     volumes:
       - /volume1/media:/media
+      - /volume1/data:/data
       - /volume2/dockerssd/jellyfin:/config
     restart: always
     image: lscr.io/linuxserver/jellyfin:10.11.6
 networks: {}
+
