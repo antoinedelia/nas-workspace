@@ -13,6 +13,7 @@ services:
       - /volume2/dockerssd/qbittorrentvpn:/config
       - /volume1/Downloads:/downloads
       - /volume1/media:/mymedia
+      - /volume1/data:/data
     restart: always
     deploy:
       resources:
@@ -20,3 +21,4 @@ services:
           memory: 4000M # limit runaway RAM usage
     network_mode: container:gluetun
 networks: {}
+
