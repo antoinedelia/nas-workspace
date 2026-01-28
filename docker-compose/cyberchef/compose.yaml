@@ -1,0 +1,7 @@
+name: cyberchef
+services:
+  cyberchef:
+    container_name: bazarr
+    ports:
+      - 8080:80
+    image: ghcr.io/gchq/cyberchef:10.20.0
