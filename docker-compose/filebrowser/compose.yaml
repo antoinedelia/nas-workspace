@@ -11,5 +11,6 @@ services:
       - /volume2/dockerssd/filebrowser/config:/database
       - /volume2/dockerssd/filebrowser/config:/config
     restart: always
-    image: filebrowser/filebrowser:latest
+    image: filebrowser/filebrowser:2.42.5
 networks: {}
+
