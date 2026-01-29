@@ -9,11 +9,10 @@ services:
       - PGID=100
       - TZ=Europe/Paris
     volumes:
-      - /volume1/Downloads:/downloads
       - /volume2/dockerssd/lidarr:/config
-      - /volume1/media/Music:/music
       - /volume1/data:/data
     restart: always
     image: ghcr.io/linuxserver/lidarr:3.1.0
 networks: {}
+
 
