@@ -11,9 +11,8 @@ services:
     volumes:
       - /volume2/dockerssd/radarr:/config
       - /volume1/data:/data
-      - /volume1/media:/movies
-      - /volume1/Downloads:/downloads
     restart: always
     image: ghcr.io/linuxserver/radarr:6.0.4
 networks: {}
+
 
