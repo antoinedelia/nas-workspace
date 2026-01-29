@@ -10,9 +10,10 @@ services:
       - TZ=Europe/Paris
     volumes:
       - /volume2/dockerssd/navidrome:/data
-      - /volume1/data/media/music:/media
+      - /volume1/data/media/music:/music
     restart: always
     image: deluan/navidrome:0.59.0
 networks: {}
+
 
 
