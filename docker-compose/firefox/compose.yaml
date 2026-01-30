@@ -5,7 +5,7 @@ services:
     ports:
       - 5812:3000
     environment:
-      - PUID=1026
+      - PUID=1029
       - PGID=100
       - TZ=Europe/Paris
       - LSIO_FIRST_PARTY=true
@@ -14,5 +14,6 @@ services:
     volumes:
       - /volume2/dockerssd/firefox:/config
     restart: always
-    image: lscr.io/linuxserver/firefox:latest
+    image: lscr.io/linuxserver/firefox:1147.0.2
 networks: {}
+
