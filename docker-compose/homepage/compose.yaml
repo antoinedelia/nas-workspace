@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   homepage:
-    image: ghcr.io/gethomepage/homepage:v1.8.0
+    image: ghcr.io/gethomepage/homepage:v1.9.0
     container_name: homepage
     environment:
       HOMEPAGE_ALLOWED_HOSTS: home.antoinedelia.fr,192.168.1.22:3000 # required, may need port. See gethomepage.dev/installation/#homepage_allowed_hosts
