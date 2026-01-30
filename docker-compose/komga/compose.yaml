@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   komga:
-    image: gotson/komga:1.23.6
+    image: gotson/komga:1.24.1
     container_name: komga
     volumes:
       - /volume2/dockerssd/komga/data:/data
