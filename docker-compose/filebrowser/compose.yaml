@@ -6,6 +6,8 @@ services:
       - 8147:8080
     environment:
       - TZ=Europe/Paris
+      - PUID=1029
+      - PGID=100
     volumes:
       - /volume1:/srv
       - /volume2/dockerssd/filebrowser/config:/database
@@ -13,5 +15,6 @@ services:
     restart: always
     image: filebrowser/filebrowser:v2.42.5
 networks: {}
+
 
 
