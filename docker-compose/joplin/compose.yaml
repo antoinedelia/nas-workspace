@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   db:
-    image: postgres:15
+    image: postgres:16.11
     volumes:
       - /volume2/dockerssd/joplin:/var/lib/postgresql/data
     ports:
@@ -12,7 +12,7 @@ services:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_DB=${POSTGRES_DB}
   app:
-    image: joplin/server:latest
+    image: joplin/server:3.5.2
     depends_on:
       - db
     ports:
@@ -36,3 +36,4 @@ services:
       - MAILER_NOREPLY_NAME=JoplinServer
       - MAILER_NOREPLY_EMAIL=${MAILER_NOREPLY_EMAIL}
 networks: {}
+
