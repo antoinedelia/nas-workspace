@@ -12,6 +12,7 @@ services:
       - /volume2/dockerssd/bazarr:/config
       - /volume1/data:/data
     restart: always
-    image: ghcr.io/linuxserver/bazarr:latest
+    image: ghcr.io/linuxserver/bazarr:1.5.4
 networks: {}
+
 
