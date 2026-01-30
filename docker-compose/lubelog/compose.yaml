@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   lubelog:
-    image: ghcr.io/hargata/lubelogger:latest
+    image: ghcr.io/hargata/lubelogger:v1.5.8
     build: .
     restart: unless-stopped
     # volumes used to keep data persistent
@@ -23,3 +23,4 @@ services:
       - TZ=Europe/Paris
       - LC_ALL=fr_FR.UTF-8
 networks: {}
+
