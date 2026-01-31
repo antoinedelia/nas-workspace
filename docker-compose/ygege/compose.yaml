@@ -1,0 +1,13 @@
+services:
+  ygege:
+    image: uwucode/ygege:0.8.0
+    container_name: ygege
+    restart: unless-stopped
+    ports:
+      - "8715:8715"
+    volumes:
+      - /volume2/dockerssd/ygege:/config
+    environment:
+      YGG_USERNAME: ${YGG_USERNAME}
+      YGG_PASSWORD: ${YGG_PASSWORD}
+      LOG_LEVEL: "debug"
