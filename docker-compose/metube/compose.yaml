@@ -1,8 +1,8 @@
-version: "3.8"
 services:
   metube:
     image: ghcr.io/alexta69/metube:2026.02.01
     container_name: metube
+    user: 1026:100
     restart: unless-stopped
     ports:
       - 8081:8081
