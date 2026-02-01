@@ -8,6 +8,6 @@ services:
     volumes:
       - /volume2/dockerssd/cross-seed:/config
       # You will need at least one extra volume for your media drive if using https://www.cross-seed.org/docs/tutorials/linking
-      - /volume1/data/torrents:/torrents
+      - /volume1/data:/data
     command: daemon
     restart: unless-stopped
