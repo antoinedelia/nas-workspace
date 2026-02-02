@@ -21,7 +21,12 @@
         "matchDatasources": ["docker"],
         "matchPackageNames": ["henrygd/beszel", "henrygd/beszel-agent"],
         "groupName": "beszel"
-      }
+      },
+      {
+        "description": "Ensure image recency to avoid picking up an outdated image with a greater version.",
+        "matchDatasources": ["docker"],
+        "matchCurrentAge": "< 1 month"
+      },
     ]
   }
 }
