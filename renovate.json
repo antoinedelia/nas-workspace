@@ -6,12 +6,21 @@
   "docker-compose": {
     "packageRules": [
       {
-        "matchPackageNames": "qbittorrent",
-        "allowedVersions": "<20",
+        "description": "Enforce strict SemVer for LinuxServer images to avoid matching 'version-' or OS tags.",
+        "matchDatasources": ["docker"],
+        "matchPackageNames": [
+          "lscr.io/linuxserver/qbittorrent", 
+          "linuxserver/qbittorrent",
+          "ghcr.io/linuxserver/lidarr",
+          "linuxserver/lidarr"
+        ],
+        "versioning": "semver"
       },
       {
-        "matchPackageNames": "lidarr",
-        "allowedVersions": "<8",
+        "description": "Group Beszel and Beszel-Agent updates into a single Pull Request.",
+        "matchDatasources": ["docker"],
+        "matchPackageNames": ["henrygd/beszel", "henrygd/beszel-agent"],
+        "groupName": "beszel"
       }
     ]
   }
