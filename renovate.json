@@ -27,6 +27,12 @@
         "matchDatasources": ["docker"],
         "matchCurrentAge": "< 1 month"
       },
+      {
+        "description": "Exclude postgres from being updated in the joplin compose file as it requires an old version of postgres.",
+        "matchPackageNames": ["postgres"],
+        "matchFileNames": ["docker-compose/joplin/compose.yaml"],
+        "enabled": false
+      },
     ]
   }
 }
