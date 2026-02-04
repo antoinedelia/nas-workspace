@@ -4,7 +4,7 @@ services:
     container_name: netalertx
     # use the below line if you want to test the latest dev image
     # image: "ghcr.io/jokob-sk/netalertx-dev:latest" 
-    image: ghcr.io/jokob-sk/netalertx:26.1.17
+    image: ghcr.io/jokob-sk/netalertx:26.2.4
     network_mode: host
     cap_drop:
       - ALL
