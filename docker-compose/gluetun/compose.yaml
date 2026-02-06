@@ -19,6 +19,7 @@ services:
       - 50300:50300 # soulseek
       - 1613:1613 # joal
       - 1613:1613/udp # joal
+      - 5812:3000 # firefox
     volumes:
       - /volume2/dockerssd/gluetun:/gluetun
     environment:
@@ -28,3 +29,4 @@ services:
       - OPENVPN_PASSWORD=${OPENVPN_PASSWORD}
       - SERVER_REGIONS=France,Belgium
 networks: {}
+
