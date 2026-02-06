@@ -2,8 +2,6 @@ version: "3.8"
 services:
   firefox:
     container_name: firefox
-    ports:
-      - 5812:3000
     environment:
       - PUID=1029
       - PGID=100
@@ -14,6 +12,8 @@ services:
     volumes:
       - /volume2/dockerssd/firefox:/config
     restart: always
+    network_mode: container:gluetun
     image: lscr.io/linuxserver/firefox:1147.0.3
 networks: {}
+
 
