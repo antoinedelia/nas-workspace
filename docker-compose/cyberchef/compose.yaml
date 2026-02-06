@@ -4,4 +4,4 @@ services:
     container_name: cyberchef
     ports:
       - 4564:80
-    image: ghcr.io/gchq/cyberchef:10.20.0
+    image: ghcr.io/gchq/cyberchef:10.21.0
