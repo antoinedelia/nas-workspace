@@ -16,8 +16,7 @@ services:
     deploy:
       resources:
         limits:
+          cpus: '0.50'   # limit to 50% of one CPU core
           memory: 4000M # limit runaway RAM usage
     network_mode: container:gluetun
 networks: {}
-
-
