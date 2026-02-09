@@ -7,7 +7,6 @@ services:
       - PGID=100
       - TZ=Europe/Paris
       - WEBUI_PORT=8080
-      - TORRENTING_PORT=6881
     volumes:
       - /volume2/dockerssd/qbittorrentvpn:/config
       - /volume1/data:/data
@@ -18,4 +17,3 @@ services:
           memory: 4000M # limit runaway RAM usage
     network_mode: container:gluetun
 networks: {}
-
