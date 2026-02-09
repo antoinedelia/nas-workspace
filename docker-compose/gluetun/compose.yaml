@@ -28,5 +28,7 @@ services:
       - OPENVPN_USER=${OPENVPN_USER}
       - OPENVPN_PASSWORD=${OPENVPN_PASSWORD}
       - SERVER_REGIONS=France,Belgium
+      - VPN_PORT_FORWARDING=on # Enable port forwarding: https://github.com/qdm12/gluetun-wiki/blob/main/setup/advanced/vpn-port-forwarding.md
 networks: {}
+
 
