@@ -11,6 +11,8 @@ services:
       - 8388:8388/tcp # Shadowsocks
       - 8388:8388/udp # Shadowsocks
       - 8080:8080 # qbittorrent
+      - 6881:6881 # qbittorrent
+      - 6881:6881/udp # qbittorrent
       - 5030:5030 # soulseek
       - 5031:5031 # soulseek
       - 50300:50300 # soulseek
@@ -24,6 +26,6 @@ services:
       - VPN_SERVICE_PROVIDER=private internet access
       - OPENVPN_USER=${OPENVPN_USER}
       - OPENVPN_PASSWORD=${OPENVPN_PASSWORD}
-      - SERVER_REGIONS=France,Belgium
-      - VPN_PORT_FORWARDING=on # Enable port forwarding: https://github.com/qdm12/gluetun-wiki/blob/main/setup/advanced/vpn-port-forwarding.md
+      - SERVER_REGIONS=France,Belgium,Spain
 networks: {}
+
