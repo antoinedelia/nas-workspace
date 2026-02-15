@@ -1,0 +1,15 @@
+services:
+  seerr:
+    container_name: seerr
+    init: true
+    ports:
+      - 5055:5055
+    environment:
+      - PUID=1026
+      - PGID=100
+      - TZ=Europe/Paris
+    volumes:
+      - /volume2/dockerssd/seerr:/app/config
+    restart: always
+    image: ghcr.io/seerr-team/seerr:v3.0.1
+networks: {}
