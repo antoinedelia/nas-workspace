@@ -2,6 +2,7 @@ services:
   seerr:
     container_name: seerr
     init: true
+    user: 1026:100
     ports:
       - 5055:5055
     environment:
@@ -12,4 +13,5 @@ services:
       - /volume2/dockerssd/seerr:/app/config
     restart: always
     image: ghcr.io/seerr-team/seerr:v3.0.1
+
 networks: {}
