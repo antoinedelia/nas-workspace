@@ -13,7 +13,7 @@ services:
       - /volume2/dockerssd/firefox:/config
     restart: always
     network_mode: container:gluetun
-    image: lscr.io/linuxserver/firefox:1147.0.3
+    image: lscr.io/linuxserver/firefox:1147.0.4
 networks: {}
 
 
