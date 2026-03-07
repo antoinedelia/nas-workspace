@@ -12,6 +12,7 @@ services:
   app:
     image: ghcr.io/mattogodoy/nametag:0.31.1
     restart: unless-stopped
+    user: "1029:100"
     ports:
       - "3001:3000"
     env_file:
