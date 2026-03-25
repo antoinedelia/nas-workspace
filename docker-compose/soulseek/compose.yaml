@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   slskd:
-    image: slskd/slskd:0.24.3
+    image: slskd/slskd:0.24.5
     container_name: slskd
     environment:
       - SLSKD_REMOTE_CONFIGURATION=true
