@@ -12,7 +12,7 @@ services:
       - /volume2/dockerssd/radarr:/config
       - /volume1/data:/data
     restart: always
-    image: ghcr.io/linuxserver/radarr:6.0.4
+    image: ghcr.io/linuxserver/radarr:6.1.1
 networks: {}
 
 
