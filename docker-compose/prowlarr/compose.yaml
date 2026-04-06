@@ -11,5 +11,5 @@ services:
     volumes:
       - /volume2/dockerssd/prowlarr:/config
     restart: always
-    image: lscr.io/linuxserver/prowlarr:2.3.0
+    image: lscr.io/linuxserver/prowlarr:2.3.5
 networks: {}
