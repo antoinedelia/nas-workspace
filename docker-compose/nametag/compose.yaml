@@ -10,7 +10,7 @@ services:
       - postgres_data:/var/lib/postgresql/data
 
   app:
-    image: ghcr.io/mattogodoy/nametag:0.42.0
+    image: ghcr.io/mattogodoy/nametag:0.42.2
     restart: unless-stopped
     user: 1026:100
     ports:
