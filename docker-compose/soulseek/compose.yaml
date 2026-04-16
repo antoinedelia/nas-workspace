@@ -5,6 +5,10 @@ services:
     container_name: slskd
     environment:
       - SLSKD_REMOTE_CONFIGURATION=true
+      - SLSKD_VPN=true
+      - SLSKD_VPN_PORT_FORWARDING=true
+      - SLSKD_VPN_GLUETUN_URL=${SLSKD_VPN_GLUETUN_URL}
+      - SLSKD_VPN_GLUETUN_API_KEY=${SLSKD_VPN_GLUETUN_API_KEY}
     volumes:
       - /volume2/dockerssd/soulseek:/app
     restart: always
