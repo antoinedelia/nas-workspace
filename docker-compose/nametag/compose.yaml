@@ -23,7 +23,7 @@ services:
       - db
 
   cron:
-    image: alpine:3.23
+    image: alpine:3.24
     restart: unless-stopped
     command: >
       sh -c "
