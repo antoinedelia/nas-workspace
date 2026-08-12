@@ -2,7 +2,7 @@ version: "3.8"
 services:
   filebrowser:
     container_name: filebrowser-quantum
-    image: gtstef/filebrowser:1.5.1-stable # https://github.com/gtsteffaniak/filebrowser/pkgs/container/filebrowser
+    image: gtstef/filebrowser:2-beta # https://github.com/gtsteffaniak/filebrowser/pkgs/container/filebrowser
     volumes:
       - /volume1:/volume1 # Do not use a root "/" directory or include the "/var" folder
       - /volume2:/volume2
