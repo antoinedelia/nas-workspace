@@ -9,5 +9,5 @@ services:
       - /volume2:/volume2
       - /volume2/dockerssd/filebrowser-quantum/data:/home/filebrowser/data
     ports:
-      - 8147:80 # exposes port 80 to host, the left-side number can be changed without config.yaml changes.
+      - 8147:8080
     restart: unless-stopped
