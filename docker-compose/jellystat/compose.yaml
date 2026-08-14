@@ -1,4 +1,3 @@
-version: "3.8"
 services:
   jellystat-db:
     image: postgres:15.15
