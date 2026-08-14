@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   jellystat-db:
-    image: postgres:15.2
+    image: postgres:15.15
     container_name: jellystat-db
     restart: unless-stopped
     environment:
@@ -23,7 +23,7 @@ services:
     volumes:
       - /volume2/dockerssd/jellystat/backup-data:/app/backend/backup-data
     ports:
-      - 3001:3000
+      - 3002:3000
     depends_on:
       - jellystat-db
 networks: {}
