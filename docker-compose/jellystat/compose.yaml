@@ -9,7 +9,7 @@ services:
     volumes:
       - /volume2/dockerssd/jellystat/db:/var/lib/postgresql/data
   jellystat:
-    image: cyfershepard/jellystat:latest
+    image: cyfershepard/jellystat:1.1.11
     container_name: jellystat
     restart: unless-stopped
     environment:
