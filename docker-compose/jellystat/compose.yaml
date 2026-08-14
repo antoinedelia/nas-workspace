@@ -1,0 +1,28 @@
+services:
+  jellystat-db:
+    image: postgres:15.15
+    container_name: jellystat-db
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    volumes:
+      - /volume2/dockerssd/jellystat/db:/var/lib/postgresql/data
+  jellystat:
+    image: cyfershepard/jellystat:1.1.11
+    container_name: jellystat
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_IP=jellystat-db
+      - POSTGRES_PORT=5432
+      - JWT_SECRET=${JWT_SECRET}
+      - TZ=Europe/Paris
+    volumes:
+      - /volume2/dockerssd/jellystat/backup-data:/app/backend/backup-data
+    ports:
+      - 3002:3000
+    depends_on:
+      - jellystat-db
+networks: {}
