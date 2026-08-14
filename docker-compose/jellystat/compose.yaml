@@ -1,6 +1,6 @@
 services:
   jellystat-db:
-    image: postgres:15.15
+    image: postgres:15.19
     container_name: jellystat-db
     restart: unless-stopped
     environment:
