@@ -27,4 +27,3 @@ services:
       - PGID=100
       - TZ=Europe/Paris
     restart: unless-stopped
-networks: {}

@@ -31,4 +31,3 @@ services:
     depends_on:
       jellystat-db:
         condition: service_healthy
-networks: {}

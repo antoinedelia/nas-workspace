@@ -41,7 +41,6 @@ services:
       - MAILER_AUTH_PASSWORD=${MAILER_AUTH_PASSWORD}
       - MAILER_NOREPLY_NAME=JoplinServer
       - MAILER_NOREPLY_EMAIL=${MAILER_NOREPLY_EMAIL}
-networks: {}
 
 
 

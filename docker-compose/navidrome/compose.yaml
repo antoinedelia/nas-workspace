@@ -13,7 +13,6 @@ services:
       - /volume1/data/media/music:/music
     restart: unless-stopped
     image: deluan/navidrome:0.64.2
-networks: {}
 
 
 

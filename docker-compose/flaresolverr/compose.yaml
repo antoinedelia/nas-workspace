@@ -10,4 +10,3 @@ services:
       - TZ=Europe/Paris
     restart: unless-stopped
     image: ghcr.io/flaresolverr/flaresolverr:v3.5.2
-networks: {}

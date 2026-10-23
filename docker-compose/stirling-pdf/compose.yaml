@@ -15,4 +15,3 @@ services:
       - DOCKER_ENABLE_SECURITY=true
       - INSTALL_BOOK_AND_ADVANCED_HTML_OPS=false
       - LANGS=fr_FR
-networks: {}

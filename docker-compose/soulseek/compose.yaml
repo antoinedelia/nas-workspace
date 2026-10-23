@@ -13,4 +13,3 @@ services:
       - /volume2/dockerssd/soulseek:/app
     restart: unless-stopped
     network_mode: container:gluetun
-networks: {}

@@ -22,5 +22,4 @@ services:
       - PGID=100
       - TZ=Europe/Paris
       - LC_ALL=fr_FR.UTF-8
-networks: {}
 

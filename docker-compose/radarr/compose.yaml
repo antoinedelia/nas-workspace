@@ -13,6 +13,5 @@ services:
       - /volume1/data:/data
     restart: unless-stopped
     image: ghcr.io/linuxserver/radarr:6.4.4
-networks: {}
 
 
