@@ -8,6 +8,11 @@ services:
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
     volumes:
       - /volume2/dockerssd/jellystat/db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
   jellystat:
     image: cyfershepard/jellystat:1.1.12
     container_name: jellystat
@@ -24,5 +29,6 @@ services:
     ports:
       - 3002:3000
     depends_on:
-      - jellystat-db
+      jellystat-db:
+        condition: service_healthy
 networks: {}
