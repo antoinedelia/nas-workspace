@@ -11,7 +11,7 @@ services:
     volumes:
       - /volume2/dockerssd/sonarr:/config
       - /volume1/data:/data
-    restart: always
+    restart: unless-stopped
     image: ghcr.io/linuxserver/sonarr:4.0.20
 networks: {}
 

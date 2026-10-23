@@ -26,5 +26,5 @@ services:
       - PUID=1026
       - PGID=100
       - TZ=Europe/Paris
-    restart: always
+    restart: unless-stopped
 networks: {}

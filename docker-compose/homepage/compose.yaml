@@ -10,5 +10,5 @@ services:
     volumes:
       - /volume2/dockerssd/homepage:/app/config # Make sure your local config directory exists
       - /var/run/docker.sock:/var/run/docker.sock:ro # optional, for docker integrations
-    restart: always
+    restart: unless-stopped
 networks: {}

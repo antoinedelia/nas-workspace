@@ -8,6 +8,6 @@ services:
       - PUID=1026
       - PGID=100
       - TZ=Europe/Paris
-    restart: always
+    restart: unless-stopped
     image: ghcr.io/flaresolverr/flaresolverr:v3.5.2
 networks: {}

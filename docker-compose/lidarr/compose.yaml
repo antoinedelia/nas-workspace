@@ -11,7 +11,7 @@ services:
     volumes:
       - /volume2/dockerssd/lidarr:/config
       - /volume1/data:/data
-    restart: always
+    restart: unless-stopped
     image: ghcr.io/linuxserver/lidarr:3.1.0
 networks: {}
 
