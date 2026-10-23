@@ -28,6 +28,18 @@
         "minimumReleaseAge": "3 days"
       },
       {
+        "description": "Automerge patch updates for low-risk apps with little stored state.",
+        "matchDatasources": ["docker"],
+        "matchPackageNames": [
+          "ghcr.io/alexta69/metube",
+          "glanceapp/glance",
+          "ghcr.io/gethomepage/homepage"
+        ],
+        "matchUpdateTypes": ["patch"],
+        "automerge": true,
+        "automergeType": "pr"
+      },
+      {
         "description": "Exclude postgres from being updated in the joplin compose file as it requires an old version of postgres.",
         "matchPackageNames": ["postgres"],
         "matchFileNames": ["docker-compose/joplin/compose.yaml"],
