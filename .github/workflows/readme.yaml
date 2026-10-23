@@ -1,0 +1,41 @@
+name: Update README
+
+on:
+  pull_request:
+    paths:
+      - docker-compose/**
+      - scripts/generate_readme_tables.py
+      - README.md
+
+permissions:
+  contents: write
+
+jobs:
+  readme:
+    # Forked PRs get a read-only token, so they cannot be pushed to.
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.head_ref }}
+
+      - uses: astral-sh/setup-uv@v10
+
+      - name: Run tests
+        run: uv run --with pytest --with pyyaml python -m pytest tests
+
+      - name: Regenerate README tables
+        run: uv run scripts/generate_readme_tables.py
+
+      - name: Commit and push if README changed
+        run: |
+          if git diff --quiet README.md; then
+            echo "README.md is up to date"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "docs: update README stacks table"
+          git push
