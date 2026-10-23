@@ -23,9 +23,9 @@
         "groupName": "beszel"
       },
       {
-        "description": "Ensure image recency to avoid picking up an outdated image with a greater version.",
+        "description": "Wait 3 days after a release before opening a PR, to avoid picking up bad releases.",
         "matchDatasources": ["docker"],
-        "matchCurrentAge": "< 1 month"
+        "minimumReleaseAge": "3 days"
       },
       {
         "description": "Exclude postgres from being updated in the joplin compose file as it requires an old version of postgres.",
