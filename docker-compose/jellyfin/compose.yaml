@@ -12,8 +12,7 @@ services:
     volumes:
       - /volume1/data:/data
       - /volume2/dockerssd/jellyfin:/config
-    restart: always
+    restart: unless-stopped
     image: lscr.io/linuxserver/jellyfin:12.3ubu2604-ls56
-networks: {}
 
 

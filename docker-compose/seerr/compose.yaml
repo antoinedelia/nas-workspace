@@ -11,7 +11,6 @@ services:
       - TZ=Europe/Paris
     volumes:
       - /volume2/dockerssd/seerr:/app/config
-    restart: always
+    restart: unless-stopped
     image: ghcr.io/seerr-team/seerr:v3.5.1
 
-networks: {}

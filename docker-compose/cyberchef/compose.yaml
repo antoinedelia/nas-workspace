@@ -2,6 +2,7 @@ name: cyberchef
 services:
   cyberchef:
     container_name: cyberchef
+    restart: unless-stopped
     ports:
       - 4564:80
     image: ghcr.io/gchq/cyberchef:11.5.0

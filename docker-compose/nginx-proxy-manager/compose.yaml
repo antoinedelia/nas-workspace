@@ -12,6 +12,5 @@ services:
       - /volume2/dockerssd/npm/config.json:/app/config/production.json
       - /volume2/dockerssd/npm/data:/data
       - /volume2/dockerssd/npm/letsencrypt:/etc/letsencrypt
-    restart: always
+    restart: unless-stopped
     image: jc21/nginx-proxy-manager:2.16.0
-networks: {}

@@ -10,6 +10,5 @@ services:
       - TZ=Europe/Paris
     volumes:
       - /volume2/dockerssd/prowlarr:/config
-    restart: always
+    restart: unless-stopped
     image: lscr.io/linuxserver/prowlarr:2.6.5
-networks: {}

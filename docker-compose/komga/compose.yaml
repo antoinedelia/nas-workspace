@@ -12,4 +12,3 @@ services:
     environment:
       - TZ=Europe/Paris
     restart: unless-stopped
-networks: {}

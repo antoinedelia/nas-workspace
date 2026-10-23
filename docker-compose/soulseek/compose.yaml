@@ -11,6 +11,5 @@ services:
       - SLSKD_VPN_GLUETUN_API_KEY=${SLSKD_VPN_GLUETUN_API_KEY}
     volumes:
       - /volume2/dockerssd/soulseek:/app
-    restart: always
+    restart: unless-stopped
     network_mode: container:gluetun
-networks: {}
