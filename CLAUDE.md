@@ -25,7 +25,7 @@ docker compose -f docker-compose/<app>/compose.yaml config -q
 - `renovate.json`: per-package rules. When adding an image that needs special handling, add a rule here. Existing rules:
   - strict `semver` versioning for the linuxserver qbittorrent and lidarr images
   - `beszel` and `beszel-agent` grouped into a single PR
-  - `minimumReleaseAge: 3 days` on all docker updates
+  - `minimumReleaseAge: 1 day` on all docker updates
   - patch updates automerge for metube, glance and homepage only (as PRs)
   - postgres pinned (updates disabled) in `joplin`, which needs an old version
 - `scripts/generate_readme_tables.py`: regenerates the stacks table in `README.md` (image names without tags, host ports, variables to set in Komodo). Tests are in `tests/`.
