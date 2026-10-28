@@ -17,15 +17,21 @@
         "versioning": "semver"
       },
       {
+        "description": "Parse LinuxServer Jellyfin tags like 12.3ubu2604-ls56 (version + Ubuntu base + build number).",
+        "matchDatasources": ["docker"],
+        "matchPackageNames": ["lscr.io/linuxserver/jellyfin", "linuxserver/jellyfin"],
+        "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)(?:\\.(?<patch>\\d+))?(?<compatibility>ubu\\d+)-ls(?<build>\\d+)$"
+      },
+      {
         "description": "Group Beszel and Beszel-Agent updates into a single Pull Request.",
         "matchDatasources": ["docker"],
         "matchPackageNames": ["henrygd/beszel", "henrygd/beszel-agent"],
         "groupName": "beszel"
       },
       {
-        "description": "Wait 3 days after a release before opening a PR, to avoid picking up bad releases.",
+        "description": "Wait 1 day after a release before opening a PR, to avoid picking up bad releases.",
         "matchDatasources": ["docker"],
-        "minimumReleaseAge": "3 days"
+        "minimumReleaseAge": "1 day"
       },
       {
         "description": "Automerge patch updates for low-risk apps with little stored state.",
