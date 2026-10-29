@@ -1,6 +1,6 @@
 services:
   audiobookshelf:
-    image: ghcr.io/advplyr/audiobookshelf:2.37.1
+    image: ghcr.io/advplyr/audiobookshelf:2.37.2
     restart: unless-stopped
     ports:
       - 13378:80
