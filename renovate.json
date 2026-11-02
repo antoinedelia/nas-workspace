@@ -50,6 +50,13 @@
         "matchPackageNames": ["postgres"],
         "matchFileNames": ["docker-compose/joplin/compose.yaml"],
         "enabled": false
+      },
+      {
+        "description": "Stay on postgres 16 in the nametag compose file (see https://github.com/mattogodoy/nametag/issues/98). Minor and patch updates are still allowed.",
+        "matchPackageNames": ["postgres"],
+        "matchFileNames": ["docker-compose/nametag/compose.yaml"],
+        "matchUpdateTypes": ["major"],
+        "enabled": false
       }
     ]
   }
