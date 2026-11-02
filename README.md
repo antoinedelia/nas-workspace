@@ -26,7 +26,6 @@ Generated from `docker-compose/*/compose.yaml` by `scripts/generate_readme_table
 | `gluetun` | `qmcgaw/gluetun` | 1613, 5030, 5031, 5812, 6881, 8080, 8388, 8888, 50300 | `OPENVPN_PASSWORD`, `OPENVPN_USER` |
 | `homepage` | `ghcr.io/gethomepage/homepage` | 3000 | - |
 | `jellyfin` | `lscr.io/linuxserver/jellyfin` | 8096 | - |
-| `jellystat` | `postgres`<br>`cyfershepard/jellystat` | 3002 | `JWT_SECRET`, `POSTGRES_PASSWORD`, `POSTGRES_USER` |
 | `joplin` | `postgres`<br>`joplin/server` | 5433, 22300 | `MAILER_AUTH_PASSWORD`, `MAILER_AUTH_USER`, `MAILER_NOREPLY_EMAIL`, `POSTGRES_DATABASE`, `POSTGRES_DB`, `POSTGRES_PASSWORD`, `POSTGRES_USER` |
 | `komga` | `gotson/komga` | 25600 | - |
 | `lidarr` | `ghcr.io/linuxserver/lidarr` | 8686 | - |

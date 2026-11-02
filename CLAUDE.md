@@ -39,7 +39,7 @@ docker compose -f docker-compose/<app>/compose.yaml config -q
 - `restart: unless-stopped` on every service.
 - Postgres services have a `pg_isready` healthcheck, and the apps use `depends_on: condition: service_healthy`.
 - Linuxserver-style containers use `PUID=1026`, `PGID=100`, `TZ=Europe/Paris`.
-- Secrets are referenced as `${VAR}` in compose files and supplied by Komodo. Do not hardcode secrets. `.env` is gitignored. To document required variables, commit a `.env.example` with `CHANGEME` placeholders (see `docker-compose/jellystat/.env.example`). The generator reads it.
+- Secrets are referenced as `${VAR}` in compose files and supplied by Komodo. Do not hardcode secrets. `.env` is gitignored. To document required variables, commit a `.env.example` with `CHANGEME` placeholders. The generator reads it.
 
 ## VPN network topology (cross-file dependency)
 
