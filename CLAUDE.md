@@ -28,6 +28,7 @@ docker compose -f docker-compose/<app>/compose.yaml config -q
   - `minimumReleaseAge: 1 day` on all docker updates
   - patch updates automerge for metube, glance and homepage only (as PRs)
   - postgres pinned (updates disabled) in `joplin`, which needs an old version
+  - postgres major updates disabled in `nametag` (stays on 16, minor/patch still update)
 - `scripts/generate_readme_tables.py`: regenerates the stacks table in `README.md` (image names without tags, host ports, variables to set in Komodo). Tests are in `tests/`.
 - `.github/workflows/readme.yaml`: on PRs that touch `docker-compose/**`, runs the tests, regenerates the table, and pushes a commit to the PR branch if it changed. Never edit the table between the `stacks:start` and `stacks:end` markers by hand.
 - Komodo itself is not in this repo. Its upgrade procedure is in `README.md`.
