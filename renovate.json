@@ -29,11 +29,6 @@
         "groupName": "beszel"
       },
       {
-        "description": "Wait 1 day after a release before opening a PR, to avoid picking up bad releases.",
-        "matchDatasources": ["docker"],
-        "minimumReleaseAge": "1 day"
-      },
-      {
         "description": "Automerge patch updates for low-risk apps with little stored state.",
         "matchDatasources": ["docker"],
         "matchPackageNames": [
