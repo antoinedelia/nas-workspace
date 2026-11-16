@@ -12,6 +12,6 @@ services:
       - /volume2/dockerssd/radarr:/config
       - /volume1/data:/data
     restart: unless-stopped
-    image: ghcr.io/linuxserver/radarr:6.4.4
+    image: ghcr.io/linuxserver/radarr:7.0.3
 
 
