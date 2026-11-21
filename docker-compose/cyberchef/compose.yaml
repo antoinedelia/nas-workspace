@@ -5,4 +5,4 @@ services:
     restart: unless-stopped
     ports:
       - 4564:80
-    image: ghcr.io/gchq/cyberchef:11.5.0
+    image: ghcr.io/gchq/cyberchef:11.6.0
